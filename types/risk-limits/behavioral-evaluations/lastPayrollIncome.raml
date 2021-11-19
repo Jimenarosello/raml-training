@@ -1,0 +1,25 @@
+#%RAML 1.0 lIBRARY
+
+uses:
+  annotations: ../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  lastPayrollIncome:
+    type: object
+    properties:
+      amount:
+        description: Monetary amount.
+        (annotations.bindingDefinition):
+          - method: GET
+            input: NONE
+            output: REQUIRED
+        type: number
+        required: false
+      currency:
+        description: String based on ISO-4217 for specifying the currency related to the last payroll accreditation.
+        (annotations.bindingDefinition):
+          - method: GET
+            input: NONE
+            output: REQUIRED
+        type: string
+        required: false

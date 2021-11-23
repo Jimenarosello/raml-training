@@ -1,18 +1,15 @@
 #%RAML 1.0 Library
-
 uses:
   annotations: ../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
-
 types:
   riskSegment:
     type: object
     properties:
       id:
-        description: The segment code of the client.
         (annotations.bindingDefinition):
           - method: GET
             input: NONE
             output: REQUIRED
         type: string
         required: false
-
+        description: The segment code of the client.

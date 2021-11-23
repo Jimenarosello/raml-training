@@ -1,11 +1,11 @@
 #%RAML 1.0
 title: Migración API proactivo-hermes
+description: !include docs/apiDescription.md
 version: v0.1.0 
 
 uses:
   annotations: ../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
-  data: types/risk-limits/behavioral-evaluations/data.raml
-  messages: types/error/messages.raml
+  data: types/behavioral-evaluations/data.raml
 
 annotationTypes:
   enumDescription: !include ../glapi-global-apis-commons-commons/annotations/enumDescription.raml
@@ -15,39 +15,38 @@ resourceTypes:
   collection-item: !include ../glapi-global-apis-commons-commons/resourceTypes/collection-item.raml
   subresource-collection: !include ../glapi-global-apis-commons-commons/resourceTypes/subresource-collection.raml
 
-/risk-limits:
-  /v0:
-    /behavioral-evaluations: 
-      /{customerId}: 
-        description: |
-          Represents a client's score with the purpose of future commercial offers. 
-        type: collection-item
-        uriParameters:
-          customerId:
-            description: Identification number of a BBVA customer
-            type: string
-            example: "02601264"
+/behavioral-evaluations: 
+  /{customerId}: 
+    description: |
+      Represents a client's score with the purpose of future commercial offers. 
+    type: collection-item
+    uriParameters:
+      customerId:
+        description: Identification number of a BBVA customer
+        type: string
+        example: "02601264"
 
-        get:
-          description: |
-            Obtain client data stored in the system (Hermes Score).
+    get:
+      description: |
+        Obtain client data stored in the system (Hermes Score).
 
-          responses:
-            200:
-              description: OK
-              body:
-                application/json:
-                  example: !include examples/risk-limits/behavioral-evaluations/get_200.json
-                  type: object
-                  properties:
-                    data:
-                      type: data.data
-            400:
-              description: ERROR
-              body:
-                application/json:
-                  example: !include examples/risk-limits/behavioral-evaluations/customer-id/get_400.json
-                  type: object
-                  properties:
-                    data:
-                      type: messages.messages
+      responses:
+        200:
+          description: OK
+          body:
+            application/json:
+              example: !include examples/behavioral-evaluations/get_200.json
+              type: object
+              properties:
+                data:
+                  type: data.data
+        400:
+          description: Bad request.
+          body:
+            application/json:
+              type: errors
+              examples:
+                 invalidParameters:
+                   value: !include examples/behavioral-evaluations/customer-id/get_400_invalidParameters.json
+                   description: The request could not be completed due to invalid parameters.
+                   displayName: Invalid parameters.

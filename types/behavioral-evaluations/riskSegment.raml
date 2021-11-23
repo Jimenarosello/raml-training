@@ -5,11 +5,12 @@ types:
   riskSegment:
     type: object
     properties:
-      id:
-        (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
-        type: string
-        required: false
-        description: The segment code of the client.
+        id:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: string
+          required: false
+          description: |
+            The segment code of the client.

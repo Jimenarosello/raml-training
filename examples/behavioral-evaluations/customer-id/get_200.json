@@ -8,7 +8,7 @@
 		"payrollCompanyCode": "00506", 
 		"numberTotalAccreditations": 6, 
 		"lastPayrollIncome": {
-			"amount": "90768", 
+			"amount": 90768, 
 			"currency": "ARS"
 		}, 
 		"riskSegment": {

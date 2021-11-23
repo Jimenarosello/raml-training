@@ -2,6 +2,7 @@
 title: Migración API proactivo-hermes
 description: !include docs/apiDescription.md
 version: v0.1.0 
+baseUri : https://www.bbvaapis.com/risk-limits/v0
 
 uses:
   annotations: ../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
@@ -14,6 +15,9 @@ resourceTypes:
   collection: !include ../glapi-global-apis-commons-commons/resourceTypes/collection.raml
   collection-item: !include ../glapi-global-apis-commons-commons/resourceTypes/collection-item.raml
   subresource-collection: !include ../glapi-global-apis-commons-commons/resourceTypes/subresource-collection.raml
+
+types:
+  errors: !include ../glapi-global-apis-commons-commons/types/errors.raml
 
 /behavioral-evaluations: 
   /{customerId}: 

@@ -1,9 +1,9 @@
-{
-	"messages": [
-		{
-			"code": "invalidParameters",
-			"message": "The request could not be completed due to invalid parameters.",
-			"type": "ERROR"
- 		}
+{  
+	"messages":[  
+	  {  
+		"code":"invalidParameters",
+		"message":"The request could not be completed due to invalid parameters.",
+		"type":"ERROR"
+	  }
 	]
 }

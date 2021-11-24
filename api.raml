@@ -2,7 +2,7 @@
 title: Migración API proactivo-hermes
 description: !include docs/apiDescription.md
 version: v0.1.0 
-baseUri : https://www.bbvaapis.com/risk-limits/v0
+baseUri: https://www.bbvaapis.com/risk-limits/v0
 
 uses:
   annotations: ../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
@@ -22,7 +22,7 @@ types:
 /behavioral-evaluations: 
   description: |
     Manage information about the client's proactve hermes.
-  type: collection
+    
   /{customerId}: 
     description: |
       Represents a client's score with the purpose of future commercial offers. 

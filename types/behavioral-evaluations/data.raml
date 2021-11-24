@@ -11,80 +11,80 @@ types:
       id:
         description: Represents the unique identifier of a customer.
         (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
         type: string
         required: false
       exclusionReasonCode:
         description: Represents the reason code of the exclusion.
         (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
         type: string
         required: false
       riskGroup:
         description: The risk group to which the client belongs.
         (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
         type: string
         required: false
       lastSalaryAccreditation:
         description: Represents the number of months that have elapsed since the last salary payment in the client's account.
         (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
         type: number
         required: false
       totalMonthsPayroll:
         description: Total number of months of the client's payroll.
         (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
         type: number
         required: false
       payrollCompanyCode:
         description: Represents the code of the Payroll Company. (The AST Code in Argentina).
         (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
         type: string
         required: false
       numberTotalAccreditations:
         description: Represents the numbers of accreditations in the client's account.
         (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
         type: number
         required: false
       lastPayrollIncome:
         description: The amount of the last payroll accreditation.
         (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
         type: lastPayrollIncome.lastPayrollIncome
         required: false
       riskSegment:
         description: The risk segment is a code used by bbva to segment customers by type. We use it to identify what type of customer is.
         (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
         type: riskSegment.riskSegment
         required: false
       riskScore:
         description: Represents the score calculated in the model Proactivo Hermes Bureau.
         (annotations.bindingDefinition):
-          - method: GET
-            input: NONE
-            output: REQUIRED
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
         type: number
         required: false

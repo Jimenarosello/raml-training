@@ -1,7 +1,7 @@
 #%RAML 1.0
 title: Risk Limits
 description: !include docs/apiDescription.md
-version: v0.0.0 
+version: v0.0.0
 baseUri: https://www.bbvaapis.com/risk-limits/v0
 
 uses:
@@ -19,20 +19,20 @@ resourceTypes:
 types:
   errors: !include ../glapi-global-apis-commons-commons/types/errors.raml
 
-/behavioral-evaluations: 
-  description: |
-     Manage information about the client's proactve hermes.
-  /{customerid}: 
-    uriParameters:
-      customerid:
-        type: string
-        description: Identification number of a BBVA customer.  
-        required: true
-        example: "02601264"
-    type: collection-item
+/behavioral-evaluations:
+    description: |
+      Manage information about the client's proactve hermes.
+    type: collection
+
     get:
       description: |
         Obtain client data stored in the system (Hermes Score).
+      queryParameters:
+        customerid:
+          description: "Identification number of a BBVA customer."
+          type: string
+          required: true
+          example: "02601264"
       responses:
         200:
           description: Ok.

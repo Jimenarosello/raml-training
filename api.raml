@@ -20,22 +20,19 @@ types:
   errors: !include ../glapi-global-apis-commons-commons/types/errors.raml
 
 /behavioral-evaluations: 
-    description: |
-      Manage information about the client's proactve hermes.
-    type: collection
-
+  description: |
+     Manage information about the client's proactve hermes.
   /{customerid}: 
     uriParameters:
       customerid:
         type: string
-        description: "Identification number of a BBVA customer."  
+        description: Identification number of a BBVA customer.  
         required: true
         example: "02601264"
     type: collection-item
     get:
       description: |
         Obtain client data stored in the system (Hermes Score).
-
       responses:
         200:
           description: Ok.

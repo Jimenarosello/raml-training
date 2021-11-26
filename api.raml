@@ -1,12 +1,12 @@
 #%RAML 1.0
-title: Migración API proactivo-hermes
+title: Risk Limits
 description: !include docs/apiDescription.md
-version: v0.1.0 
+version: v0.0.0 
 baseUri: https://www.bbvaapis.com/risk-limits/v0
 
 uses:
   annotations: ../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
-  data: types/behavioral-evaluations/data.raml
+  behavioralEvaluations: types/behavioral-evaluations/behavioralEvaluations.raml
 
 annotationTypes:
   enumDescription: !include ../glapi-global-apis-commons-commons/annotations/enumDescription.raml
@@ -22,31 +22,27 @@ types:
 /behavioral-evaluations: 
   description: |
     Manage information about the client's proactve hermes.
-
-  /{customerid}: 
-    description: |
-      Represents a client's score with the purpose of future commercial offers. 
     type: collection-item
-    uriParameters:
-      customerid:
-        description: "Identification number of a BBVA customer."
-        type: string
-        example: "02601264"
 
     get:
       description: |
         Obtain client data stored in the system (Hermes Score).
-
+      queryParameters:
+        customerid:
+          description: "Identification number of a BBVA customer."
+          type: string
+          required: true
+          example: "02601264"
       responses:
         200:
-          description: OK
+          description: Ok.
           body:
             application/json:
               example: !include  examples/behavioral-evaluations/customer-id/get_200.json
               type: object
               properties:
                 data:
-                  type: data.data
+                  type: behavioralEvaluations.behavioralEvaluations
         400:
           description: Bad request.
           body:

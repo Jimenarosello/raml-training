@@ -6,21 +6,19 @@ types:
   lastPayrollIncome:
     type: object
     properties:
-      amount:        
+      amount:  
         (annotations.bindingDefinition):  
           - method: "GET"
             input: "NONE"
             output: "REQUIRED"
         type: number
+        description: Monetary amount.      
         required: false
-        description: |
-          Monetary amount.
       currency:
         (annotations.bindingDefinition):
           - method: "GET"
             input: "NONE"
             output: "REQUIRED"
         type: string
+        description: String based on ISO-4217 for specifying the currency related to the amount.
         required: false
-        description: |
-          String based on ISO-4217 for specifying the currency related to the amount.

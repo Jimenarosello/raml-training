@@ -24,15 +24,18 @@ types:
       Manage information about the client's proactve hermes.
     type: collection
 
+  /{customerid}: 
+    uriParameters:
+      customerid:
+        type: string
+        description: "Identification number of a BBVA customer."
+        required: true
+        example: "02601264"
+
     get:
       description: |
         Obtain client data stored in the system (Hermes Score).
-      queryParameters:
-        customerid:
-          description: "Identification number of a BBVA customer."
-          type: string
-          required: true
-          example: "02601264"
+
       responses:
         200:
           description: Ok.

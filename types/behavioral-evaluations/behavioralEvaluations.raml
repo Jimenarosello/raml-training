@@ -14,7 +14,8 @@ types:
             input: "NONE"
             output: "REQUIRED"
         type: string
-        description: Represents the unique identifier of a customer.
+        description: | 
+          Represents the unique identifier of a customer.
         required: false
       exclusionReasonCode:
         (annotations.bindingDefinition):
@@ -22,7 +23,8 @@ types:
             input: "NONE"
             output: "REQUIRED"
         type: string
-        description: Represents the reason code of the exclusion.
+        description: | 
+          Represents the reason code of the exclusion.
         required: false
       riskGroup:
         (annotations.bindingDefinition):
@@ -30,7 +32,8 @@ types:
             input: "NONE"
             output: "REQUIRED"
         type: string
-        description: The risk group to which the client belongs.
+        description: | 
+          The risk group to which the client belongs.
         required: false
       lastSalaryAccreditation:
         (annotations.bindingDefinition):
@@ -38,7 +41,8 @@ types:
             input: "NONE"
             output: "REQUIRED"
         type: number
-        description: Represents the number of months that have elapsed since the last salary payment in the client's account.
+        description: | 
+          Represents the number of months that have elapsed since the last salary payment in the client's account.
         required: false
       totalMonthsPayroll:
         (annotations.bindingDefinition):
@@ -46,7 +50,8 @@ types:
             input: "NONE"
             output: "REQUIRED"
         type: number
-        description: Total number of months of the client's payroll.
+        description: | 
+          Total number of months of the client's payroll.
         required: false
       payrollCompanyCode:
         (annotations.bindingDefinition):
@@ -54,7 +59,8 @@ types:
             input: "NONE"
             output: "REQUIRED"
         type: string
-        description: Represents the code of the Payroll Company. (The AST Code in Argentina).
+        description: |
+          Represents the code of the Payroll Company. (The AST Code in Argentina).
         required: false
       numberTotalAccreditations:
         (annotations.bindingDefinition):
@@ -62,7 +68,8 @@ types:
             input: "NONE"
             output: "REQUIRED"
         type: number
-        description: Represents the numbers of accreditations in the client's account.
+        description: |
+          Represents the numbers of accreditations in the client's account.
         required: false
       lastPayrollIncome:
         (annotations.bindingDefinition):
@@ -70,7 +77,8 @@ types:
             input: "NONE"
             output: "REQUIRED"
         type: lastPayrollIncome.lastPayrollIncome
-        description: The amount of the last payroll accreditation.
+        description: | 
+           The amount of the last payroll accreditation.
         required: false
       riskSegment:
         (annotations.bindingDefinition):
@@ -78,7 +86,8 @@ types:
             input: "NONE"
             output: "REQUIRED"
         type: riskSegment.riskSegment
-        description: The risk segment is a code used by bbva to segment customers by type. We use it to identify what type of customer is.
+        description: | 
+          The risk segment is a code used by bbva to segment customers by type. We use it to identify what type of customer is.
         required: false
       riskScore:
         (annotations.bindingDefinition):
@@ -86,5 +95,6 @@ types:
             input: "NONE"
             output: "REQUIRED"
         type: number
-        description: Represents the score calculated in the model Proactivo Hermes Bureau.
+        description: |
+          Represents the score calculated in the model Proactivo Hermes Bureau.
         required: false

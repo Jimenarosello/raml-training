@@ -29,7 +29,8 @@ types:
         Obtain client data stored in the system (Hermes Score).
       queryParameters:
         customerid:
-          description: "Identification number of a BBVA customer."
+          description: | 
+            "Identification number of a BBVA customer."
           type: string
           required: true
           example: "02601264"
@@ -51,5 +52,6 @@ types:
               examples:
                  invalidParameters:
                    value: !include examples/behavioral-evaluations/customer-id/get_400_invalidParameters.json
-                   description: The request could not be completed due to invalid parameters.
+                   description: |
+                      The request could not be completed due to invalid parameters.
                    displayName: Invalid parameters.

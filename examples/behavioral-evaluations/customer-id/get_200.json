@@ -1,5 +1,6 @@
 {
-	"data": {
+	"data": [
+		{
 		"id": "00000001", 
 		"exclusionReasonCode": "23", 
 		"riskGroup": "1", 
@@ -15,5 +16,6 @@
 			"id": "N81100B"
 		},
 		"riskScore":10
-	}
+		}
+	]
 }

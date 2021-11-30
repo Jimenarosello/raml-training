@@ -21,25 +21,25 @@ types:
 
 /behavioral-evaluations:
     description: |
-      Manage information about the client's proactve hermes.
+      Manage information about the customer's behavioral evaluations.
     type: collection
 
     get:
       description: |
-        Obtain client data stored in the system (Hermes Score).
+        Retrieves information about customer's behavioral evaluations. In Argentina, it is information that resides in the Hermes scoring system.
       queryParameters:
         customerid:
           description: | 
-            "Identification number of a BBVA customer."
+            "Unique identifier of a customer, to be used only for attended channels."
           type: string
-          required: true
+          required: false
           example: "02601264"
       responses:
         200:
           description: Ok.
           body:
             application/json:
-              example: !include  examples/behavioral-evaluations/customer-id/get_200.json
+              example: !include examples/behavioral-evaluations/customer-id/get_200.json
               type: object
               properties:
                 data:

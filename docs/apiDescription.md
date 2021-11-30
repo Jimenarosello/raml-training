@@ -1,1 +1,1 @@
-.
+This API includes services that provides the risks information for Argentina.

@@ -1,0 +1,21 @@
+{
+	"data": [
+		{
+		"id": "00000001", 
+		"exclusionReasonCode": "23", 
+		"riskGroup": "1", 
+		"lastSalaryAccreditation": 58, 
+		"totalMonthsPayroll": 1, 
+		"payrollCompanyCode": "00506", 
+		"numberTotalAccreditations": 6, 
+		"lastPayrollIncome": {
+			"amount": 90768, 
+			"currency": "ARS"
+		}, 
+		"riskSegment": {
+			"id": "N81100B"
+		},
+		"riskScore":10
+		}
+	]
+}

@@ -1,0 +1,73 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+  cards: cards.raml 
+
+types:
+  customers:
+    type: array
+    items:
+      properties:
+        id:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: number
+          description: | 
+            Represents the unique identifier of a customer.
+          required: false
+        dni:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: number
+          description: | 
+            Represents the customer's document.
+          required: false
+        name:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: string
+          description: | 
+            The customer's name.
+          required: false
+        lastName:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: string
+          description: | 
+            The customer's last name. 
+          required: false
+        dateOfBirth:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: date
+          description: | 
+            The customer's birthday.
+          required: false
+        accountNumber:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: string
+          description: |
+            The customer's account number.
+          required: false
+        cards:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: cards.cards 
+          description: |
+            The customer's cards.
+          required: false

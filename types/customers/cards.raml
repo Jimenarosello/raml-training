@@ -1,0 +1,54 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../../glapi-global-apis-commons-commons/annotations/annotationsLibrary.raml
+
+types:
+  cards:
+    type: array
+    items:
+      properties:
+        type:  
+          (annotations.bindingDefinition):  
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: string
+          description: | 
+            The type of card.      
+          required: false
+        cardHolder:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: string
+          description: | 
+            The card holder.
+          required: false
+        cardNumber:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: string
+          description: | 
+            The card number.
+          required: false
+        purchaseLimit:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: number
+          description: | 
+            The card purchase limit.
+          required: false
+        expirationDate:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: date
+          description: | 
+            The card expiration date.
+          required: false

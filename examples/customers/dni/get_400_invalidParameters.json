@@ -1,0 +1,9 @@
+{
+	"messages": [
+		{
+			"code": "invalidParameters",
+			"message": "El dni es incorrecto.",
+			"type": "ERROR"
+ 		}
+	]
+}

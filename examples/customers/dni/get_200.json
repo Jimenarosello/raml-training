@@ -1,0 +1,26 @@
+{
+	"data": {
+		"id": 1,
+		"dni": 12345678,
+		"name": "José",  
+		"lastName": "Pérez",  
+		"dateOfBirth": 12-12-1960,  
+		"accountNumber": "123123123", 
+		"cards": [
+			{
+				"type": "credito", 
+				"cardHolder": "VISA", 
+				"cardNumber": "121233123123",   
+				"purchaseLimit": 200000, 
+				"expirationDate": 12-12-2025  
+			}, 
+			{
+				"type": "debito", 
+				"cardHolder": "VISA", 
+				"cardNumber": "121233123124",   
+				"purchaseLimit": 50000, 
+				"expirationDate": 12-12-2025  
+			}
+		] 
+	}
+}
